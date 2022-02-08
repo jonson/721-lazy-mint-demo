@@ -1,0 +1,16 @@
+compiler:
+    solc:
+        remappings:
+          - "@openzeppelin=./node_modules/@openzeppelin"
+
+networks:
+  development:
+    cmd_settings:
+      port: 8546
+      # this is needed for ganache 6.x, else the eip712 signing is broken
+      # https://github.com/protocol/nft-website/issues/121
+      # comment it out for ganache 7.x.  (revert messages are not working in ganache 7.x... PR is merge w/ fix
+      # in brownie, just waiting for a release)
+      chain_id: 1337
+
+dotenv: .env

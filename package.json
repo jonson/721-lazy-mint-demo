@@ -1,0 +1,22 @@
+{
+  "name": "bitbutts-contracts2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "create-tree": "ts-node merkle-tree/src/create-tree.ts",
+    "lint": "prettier -c contracts interfaces",
+    "lint:fix": "prettier -w contracts interfaces",
+    "pylint": "black --check --diff --target-version py39 tests scripts",
+    "pylint:fix": "black --target-version py39 tests scripts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "ganache-cli": "6.12.2"
+  }
+}
